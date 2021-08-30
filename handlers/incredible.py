@@ -27,4 +27,3 @@ async def help_(client: Client, message: Message):
 
 - `/skip - play the next song
 
-- `/end - stop music play
