@@ -22,5 +22,5 @@ async def help_(client: Client, message: Message):
 - `/pause - pause song play
 - `/resume - resume song play
 - `/skip - play the next song
-- `/end - end song
+- `/end - end song""")
 
