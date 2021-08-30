@@ -5,10 +5,11 @@ import time
 
 import psutil
 from pyrogram import filters
+from pyrogram import Client
 from pyrogram.errors import FloodWait
 from config import SUDO_USERS
 
-@client.on_message(
+@Client.on_message(
     filters.command("broadcast")
     & filters.user(SUDO_USERS)
     & ~filters.edited
