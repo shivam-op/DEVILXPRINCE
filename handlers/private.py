@@ -9,24 +9,27 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
       await message.reply_text(
         f"""**Hey, I'm {bn} 🎀
-🤖 I am an advanced bot created for playing music in the voice chats of Telegram Groups & Channels. !**
+🤖Hᴇʏ, ɪ'ᴍ ʙᴇsᴛɪᴇs ᴠᴄ ʙᴏᴛ❤️🔥
+I Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ. 
+Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴩ Aɴᴅ Pʟᴀʏ Mᴜsɪᴄ Fʀᴇᴇʟʏ!
+/help - to get commands
 
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔨Owner", url="https://t.me/ALWAYS_SHIVAMOP")
+                        "Oᴡɴᴇʀ✅", url="https://t.me/ALWAYS_SHIVAMOP")
                   ],[
                     InlineKeyboardButton(
-                        "sᴜᴘᴘᴏʀᴛ👿", url="https://t.me/BONDOFBESTIZZ"
+                        "Sᴜᴘᴘᴏʀᴛ🔥", url="https://t.me/BONDOFBESTIZZ"
                     ),
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ", url="https://t.me/INCREDIBLE_SPAM_BOT"
+                        "Uᴘᴅᴀᴛᴇ🛠", url="https://t.me/INCREDIBLE_SPAM_BOT"
                     )    
                 ],[ 
                     InlineKeyboardButton(
-                        "➕ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕", url="https://t.me/BESTIES_ROBOT?startgroup=true"
+                        "➕Aᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ➕", url="https://t.me/BESTIES_ROBOT?startgroup=true"
                     )]
             ]
         ),
