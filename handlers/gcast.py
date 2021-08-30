@@ -12,7 +12,7 @@ from pyrogram.errors import UserAlreadyParticipant
 from callsmusic.callsmusic import client as USER
 from config import SUDO_USERS
 
-@app.on_message(
+@client.on_message(
     filters.command("broadcast")
     & filters.user(SUDO_USERS)
     & ~filters.edited
