@@ -13,18 +13,18 @@ async def help_(client: Client, message: Message):
         f"""Cᴏᴍᴍᴀɴᴅs ᴏғ Bᴇsᴛɪᴇs Vᴄ Bᴏᴛ 🔥🛠
 **For all in group**
 
-- `  /play <song name> - play song you requested 
+- `/play <song name> - play song you requested 
 
-- `  /song <song name> - download songs you want quickly
+- `/song <song name> - download songs you want quickly
 
  
 ** Admin only**🔥😏
 
 
-- ` /pause - pause song play
+- `/pause - pause song play
 
-- ` /resume - resume song play
+- `/resume - resume song play
 
-- ` /skip - play the next song
+- `/skip - play the next song
 
-- ` /end - stop music play
+- `/end - stop music play
