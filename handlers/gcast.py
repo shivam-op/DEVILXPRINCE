@@ -12,27 +12,32 @@ from pyrogram.errors import UserAlreadyParticipant
 from callsmusic.callsmusic import client as USER
 from config import SUDO_USERS
 
-@Client.on_message(filters.command(["broadcast"]))
-async def broadcast(_, message: Message):
-    sent=0
-    failed=0
-    if message.from_user.id not in SUDO_USERS:
-        return
-    else:
-        wtf = await message.reply("Starting a broadcast...")
-        if not message.reply_to_message:
-            await wtf.edit("Please Reply to a Message to broadcast!")
-            return
-        lmao = message.reply_to_message.text
-        async for dialog in USER.iter_dialogs():
-            try:
-                await USER.send_message(dialog.chat.id, lmao)
-                sent = sent+1
-                await wtf.edit(f"broadcasting... \n\n**Sent to:** {sent} Chats \n**Failed in:** {failed} Chats")
-                await asyncio.sleep(3)
-            except:
-                failed=failed+1
-                #await wtf.edit(f"broadcasting... \n\n**Sent to:** {sent} Chats \n**Failed in:** {failed} Chats")
-                
-            
-        await message.reply_text(f"Broadcast Finished  \n\n**Sent to:** {sent} Chats \n**Failed in:** {failed} Chats")
+@app.on_message(
+    filters.command("broadcast")
+    & filters.user(SUDO_USERS)
+    & ~filters.edited
+)
+@capture_err
+async def broadcast_message(_, message):
+    if len(message.command) < 2:
+        return await message.reply_text(
+            "**Usage**:\n/broadcast [MESSAGE]"
+        )
+    sleep_time = 0.1
+    text = message.text.split(None, 1)[1]
+    sent = 0
+    schats = await get_served_chats()
+    chats = [int(chat["chat_id"]) for chat in schats]
+    m = await message.reply_text(
+        f"Broadcast in progress, will take {len(chats) * sleep_time} seconds."
+    )
+    for i in chats:
+        try:
+            await app.send_message(i, text=text)
+            await asyncio.sleep(sleep_time)
+            sent += 1
+        except FloodWait as e:
+            await asyncio.sleep(int(e.x))
+        except Exception:
+            pass
+    await m.edit(f"**Broadcasted Message In {sent} Chats.**")
