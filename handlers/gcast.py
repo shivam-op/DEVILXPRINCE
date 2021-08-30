@@ -8,10 +8,10 @@ from pyrogram.types import Dialog
 from pyrogram.types import Chat
 from pyrogram.types import Message
 from aiohttp import ClientSession
-from camillavcbot2.0.config import SUDO_USERS, BOT_TOKEN
+from config import SUDO_USERS, BOT_TOKEN
 from pyrogram.errors import UserAlreadyParticipant
 
-from camillavcbot2.0.services.callsmusic.callsmusic import client as USER
+from .services.callsmusic.callsmusic import client as USER
 from camillavcbot2.0.config import SUDO_USERS
 
 @Client.on_message(filters.command(["broadcast"]))
