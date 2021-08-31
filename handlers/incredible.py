@@ -10,7 +10,7 @@ from pyrogram.types import Message
 )
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""Cᴏᴍᴍᴀɴᴅs ᴏғ Bᴇsᴛɪᴇs Vᴄ Bᴏᴛ 🔥🛠
+        f"""Cᴏᴍᴍᴀɴᴅs ᴏғ 𝗠𝗿 𝗗 𝗘 𝗩 𝗶 𝗟🕊️⃝🦋</ 𝗣 𝗥 𝗶 𝗡 𝗖 𝗘 [ 🇮🇳 ] Vᴄ Bᴏᴛ 🔥🛠
 **For all in group**
 
 - `/play <song name> - play song you requested 
