@@ -19,22 +19,17 @@ from config import SUDO_USERS
     & ~filters.edited
 )
 async def gcast(event):
-    if not event.out and not is_fullsudo(event.sender_id):
-        return await edit_or_reply(event, "This Command Is Sudo Restricted.")
-    xx = event.pattern_match.group(1)
-    if not xx:
-        return edit_or_reply(event, "Give some text to Globally Broadcast")
-    tt = event.text
-    msg = tt[6:]
-    event = await edit_or_reply(event, "Globally Broadcasting Msg...")
-    er = 0
-    done = 0
-    async for x in bot.iter_dialogs():
-        if x.is_group:
-            chat = x.id
+    
+    to_send = update.effective_message.text.split(None, 1)
+    if len(to_send) >= 2:
+        chats = sql.get_all_chats() or []
+        failed = 0
+        for chat in chats:
             try:
-                done += 1
-                await bot.send_message(chat, msg)
-            except BaseException:
-                er += 1
-    await kk.edit(f"Done in {done} chats, error in {er} chat(s)")
+                bot.sendMessage(int(chat.chat_id), to_send[1])
+                sleep(0.1)
+            except TelegramError:
+                failed += 1
+                LOGGER.warning("Couldn't send broadcast to %s, group name %s", str(chat.chat_id), str(chat.chat_name))
+
+        update.effective_message.reply_text("Broadcast complete. {} groups failed to receive the message, probably "
