@@ -6,7 +6,7 @@ import time
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights
-
+from telegram import TelegramError, Chat, Message
 import psutil
 from pyrogram import filters
 from pyrogram import Client
