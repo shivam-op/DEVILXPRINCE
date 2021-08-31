@@ -1,7 +1,3 @@
-# How To Host
-The easiest way to deploy this Bot
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/war-legend/camillavcbot2.0"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-redblack?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-
 Get STRING_NAME from here:
 
 [![GenerateString](https://img.shields.io/badge/repl.it-generateString-brown)](https://replit.com/@warlegend/WarbotZ#main.p)
@@ -32,15 +28,15 @@ Get STRING_NAME from here:
 - `/end` - stop music play
 ## Our Telegram Channel and Group
 
-* [Warbotz](https://telegram.dog/thewarbotz)
+* [Update channel](https://telegram.dog/incredible_spam_bot)
 
-* [WarBotzChat](https://telegram.dog/warbotzsupport)
+* [WarBotzChat](https://telegram.dog/BONDOFBESTIZZ)
 
 ## Credits, and Thanks to 
 
-*   [Abhishek](https://telegram.dog/xabhisheksingh)
+*   [CYBER KING](https://telegram.dog/ITZ_ME_CYBERKING)
 
-*. [Lucifer](https://t.me/lmlucifer)
+
 
 
 
