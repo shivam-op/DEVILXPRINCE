@@ -16,9 +16,7 @@ from config import SUDO_USERS
 )
 async def broadcast_message(_, message):
     if len(message.command) < 2:
-        return await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE]"
-        )
+        
     sleep_time = 0.1
     text = message.text.split(None, 1)[1]
     sent = 0
