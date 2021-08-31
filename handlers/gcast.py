@@ -3,6 +3,10 @@ import os
 import subprocess
 import time
 
+from telethon import events
+from telethon.tl.functions.channels import EditAdminRequest
+from telethon.tl.types import ChatAdminRights
+
 import psutil
 from pyrogram import filters
 from pyrogram import Client
