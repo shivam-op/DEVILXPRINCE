@@ -10,28 +10,27 @@ from pyrogram.errors import FloodWait
 from config import SUDO_USERS
 
 @Client.on_message(
-    filters.command("broadcast")
+    filters.command("gcast")
     & filters.user(SUDO_USERS)
     & ~filters.edited
 )
-async def broadcast_message(_, message):
-    if len(message.command) < 2:
-        
-    sleep_time = 0.1
-    text = message.text.split(None, 1)[1]
-    sent = 0
-    schats = await get_served_chats()
-    chats = [int(chat["chat_id"]) for chat in schats]
-    m = await message.reply_text(
-        f"Broadcast in progress, will take {len(chats) * sleep_time} seconds."
-    )
-    for i in chats:
-        try:
-            await app.send_message(i, text=text)
-            await asyncio.sleep(sleep_time)
-            sent += 1
-        except FloodWait as e:
-            await asyncio.sleep(int(e.x))
-        except Exception:
-            pass
-    await m.edit(f"**Broadcasted Message In {sent} Chats.**")
+async def gcast(event):
+    if not event.out and not is_fullsudo(event.sender_id):
+        return await edit_or_reply(event, "This Command Is Sudo Restricted.")
+    xx = event.pattern_match.group(1)
+    if not xx:
+        return edit_or_reply(event, "Give some text to Globally Broadcast")
+    tt = event.text
+    msg = tt[6:]
+    event = await edit_or_reply(event, "Globally Broadcasting Msg...")
+    er = 0
+    done = 0
+    async for x in bot.iter_dialogs():
+        if x.is_group:
+            chat = x.id
+            try:
+                done += 1
+                await bot.send_message(chat, msg)
+            except BaseException:
+                er += 1
+    await kk.edit(f"Done in {done} chats, error in {er} chat(s)")
