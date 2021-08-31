@@ -30,7 +30,7 @@ Get STRING_NAME from here:
 
 * [Update channel](https://telegram.dog/incredible_spam_bot)
 
-* [WarBotzChat](https://telegram.dog/BONDOFBESTIZZ)
+* [Support group](https://telegram.dog/BONDOFBESTIZZ)
 
 ## Credits, and Thanks to 
 
