@@ -9,7 +9,7 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
       await message.reply_text(
         f"""**Hey, I'm {bn} 🎀
-🤖Hᴇʏ, ɪ'ᴍ ʙᴇsᴛɪᴇs ᴠᴄ ʙᴏᴛ❤️🔥
+🤖Hᴇʏ, ɪ'ᴍ ᴠᴄ ʙᴏᴛ❤️🔥
 I Cᴀɴ Pʟᴀʏ Mᴜsɪᴄ Iɴ Yᴏᴜʀ Gʀᴏᴜᴩ Vᴏɪᴄᴇ Cʜᴀᴛ. 
 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴩ Aɴᴅ Pʟᴀʏ Mᴜsɪᴄ Fʀᴇᴇʟʏ!
 /help - to get commands
@@ -19,7 +19,7 @@ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴩ Aɴᴅ Pʟᴀʏ Mᴜsɪᴄ Fʀᴇᴇʟ�
             [
                 [
                     InlineKeyboardButton(
-                        "Oᴡɴᴇʀ✅", url="https://t.me/ALWAYS_SHIVAMOP")
+                        "Oᴡɴᴇʀ✅", url="https://t.me/Itz_me_cyberking")
                   ],[
                     InlineKeyboardButton(
                         "Sᴜᴘᴘᴏʀᴛ🔥", url="https://t.me/BONDOFBESTIZZ"
